@@ -66,9 +66,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
             $accountStr = implode(",", $account);
 
-            $stmt = $pdo->prepare("INSERT INTO users 
-                (first_name, last_name, username, email, number, password_hash, country, currency, account, referral) 
-                VALUES (?, ?, ?)");
+            $stmt = $pdo->prepare("INSERT INTO users (first_name, last_name, username, email, number, password_hash, country, currency, account, referral) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             
             $stmt->execute([
                 $first_name, $last_name, $username, $email, $number, 
@@ -239,12 +238,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <span style="color:crimson"></span>
         <br>
         <label style="color:black">phone Number</label>
-        <input type="text" ... name="number" placeholder="example:+1234567890" value="<?= htmlspecialchars($number) ?>" required>
+        <input type="text" name="number" placeholder="example:+1234567890" value="<?= htmlspecialchars($number) ?>" required>
         <span style="color:crimson"></span>
         <br>
         <div style="display:none">
             <label style="color:black">Referral</label>
-            <input type="text" ... name="referral" placeholder="None" value="<?= htmlspecialchars($referral) ?>" readonly>
+            <input type="text" name="referral" placeholder="None" value="<?= htmlspecialchars($referral) ?>" readonly>
             <span style="color:crimson"></span>
             <br>
         </div>
