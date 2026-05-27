@@ -1,33 +1,38 @@
 <?php
 session_start();
-$path = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
-$path = explode('/', $path);
-$page = $path[0] ?? 'home';
-$page = ($page === '') ? 'home' : $page;
-$pages = [
-    'login' => 'login.php',
-    'register' => 'register.php',
-    'home' => 'home.php',
+
+// Allowed pages in dashboard
+$routes = [
+    '' => 'account.php',
     'account' => 'account.php',
-    'info' => 'info.php',
-    'logout' => 'logout.php',
-    'signal' => 'signal.php',
-    'transaction' => 'transaction.php',
-    'payment' => 'payment.php',
-    'settings' => 'settings.php',
-    'history' => 'history.php',
-    'forgot' => 'forgot.php',
     'deposit' => 'deposit.php',
+    'forgot' => 'forgot.php',
+    'history' => 'history.php',
+    'info' => 'info.php',
+    'login' => 'login.php',
+    'logout' => 'logout.php',
+    'payment' => 'payment.php',
+    'register' => 'register.php',
+    'settings' => 'settings.php',
+    'transaction' => 'transaction.php',
     'upgrade' => 'upgrade.php',
     'withdraw' => 'withdraw.php',
 ];
-if (isset($pages[$page])) {
-    require __DIR__ . '/' . $pages[$page];
-} else {
-    http_response_code(404);
-    require __DIR__ . '/404.php';
+
+$uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+$uri = str_replace('Dashboard/', '', $uri);
+$uri = str_replace('dashboard/', '', $uri);
+
+if (isset($routes[$uri])) {
+    $file = __DIR__ . '/' . $routes[$uri];
+    if (file_exists($file)) {
+        require $file;
+        exit;
+    }
 }
-?>
+
+http_response_code(404);
+echo '404 - Page Not Found';
 
 
 <!DOCTYPE html>
@@ -136,8 +141,8 @@ if (isset($pages[$page])) {
         <ul class="navbar-nav  justify-content-end">
           <li style="margin:4px"><a href="#" class="btn btn-link text-white"></a></li>
           <li style="margin:4px"><a href="../home" style="background:#3f48cc;color:white" class="btn btn-primary">Home</a></li>
-          <li style="margin:4px"><a href="login.php" style="background:#3f48cc;color:white" class="btn btn-primary">Login</a></li>
-          <li style="margin:4px"><a href="register.php" style="background:#3f48cc;color:white" class="btn btn-primary">Register</a></li>
+          <li style="margin:4px"><a href="login" style="background:#3f48cc;color:white" class="btn btn-primary">Login</a></li>
+          <li style="margin:4px"><a href="register" style="background:#3f48cc;color:white" class="btn btn-primary">Register</a></li>
         </ul>
       </div>
     </nav>
@@ -180,8 +185,8 @@ if (isset($pages[$page])) {
     <br>
     <input type="submit" name="login_btn" style="background:#3f48cc;color:white" class="btn btn-lg btn-primary" value="Login"><br>
     <br>
-    <p class="mt-3"><a href="register.php" class="text-white">Register here!</a> <br>
-      <a style="color:#0080db" href="forgot.php" class="">Forgot password?</a>
+    <p class="mt-3"><a href="register" class="text-white">Register here!</a> <br>
+      <a style="color:#0080db" href="forgot" class="">Forgot password?</a>
     </p>
   </form>
   <br>
