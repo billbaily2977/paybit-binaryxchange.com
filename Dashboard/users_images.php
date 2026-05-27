@@ -1,5 +1,4 @@
 <?php
-<?php
 function get_user_image_path() {
     global $pdo; // <-- add this
     require_once "client/db.php"; 
