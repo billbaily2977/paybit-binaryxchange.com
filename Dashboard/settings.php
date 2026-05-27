@@ -329,7 +329,7 @@ $imagePath = $user['image_path'] ?? '/img/profile/default.png';
     <div class="sidebar-right pull-right ">
       <ul class="navbar-nav  justify-content-end">
         <li class="nav-item">
-          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><span class="userpic"><img src="<?= htmlspecialchars($imagePath) ?? '/img/profile/default.png'; ?>" alt="user pic"></span><span class="text" ><?= $_SESSION['first_name'] ?></span>
+          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><span class="userpic"><img src="<?= htmlspecialchars($imagePath) ?? '/img/profile/default.png'; ?>" alt="user pic"></span><span class="text" ><?= $_SESSION['first_name'] ?><?= $_SESSION['first_name'] ?></span>
         </li>
         <li><a href="logout.php" class="btn btn-link icon-header"><span class="fa fa-power-off"></span></a></li>
       </ul>
