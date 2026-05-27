@@ -217,8 +217,8 @@ $user['total_earning']  = $user['total_earning'] ?? 0.00;
     <div class="sidebar-right pull-right ">
       <ul class="navbar-nav  justify-content-end">
         <li class="nav-item">
-          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><span class="userpic"><img src="<?php echo get_user_image_path(); ?>" alt="user pic"></span><span class="text"><?= $_SESSION['first_name'] ?></span>
-        </li>
+          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="userpic"><img src="<?php echo get_user_image_path(); ?>" alt="user pic"><span class="text"><?= $_SESSION['first_name'] ?></span></span>
+          </button></li>
         <li><a href="logout.php" class="btn btn-link icon-header"><span class="fa fa-power-off"></span></a></li>
       </ul>
     </div>
