@@ -101,14 +101,14 @@ $imagePath = get_user_image_path();
 
   <header class="navbar-fixed">
     <nav class="navbar navbar-toggleable-md sign-in-header">
-      <div class="sidebar-left"> <a class="navbar-brand imglogo" href="index.php"></a> </div>
+      <div class="sidebar-left"> <a class="navbar-brand imglogo" href="index"></a> </div>
       <div class="col"></div>
       <div class="sidebar-right pull-right">
         <ul class="navbar-nav  justify-content-end">
           <li style="margin:4px"><a href="#" class="btn btn-link text-white"></a></li>
           <li style="margin:4px"><a href="../home" style="background:#3f48cc;color:white" class="btn btn-primary">Home</a></li>
-          <li style="margin:4px"><a href="login.php" style="background:#3f48cc;color:white" class="btn btn-primary">Login</a></li>
-          <li style="margin:4px"><a href="register.php" style="background:#3f48cc;color:white" class="btn btn-primary">Register</a></li>
+          <li style="margin:4px"><a href="login" style="background:#3f48cc;color:white" class="btn btn-primary">Login</a></li>
+          <li style="margin:4px"><a href="register" style="background:#3f48cc;color:white" class="btn btn-primary">Register</a></li>
         </ul>
       </div>
     </nav>
@@ -133,7 +133,7 @@ $imagePath = get_user_image_path();
   <br>
   <input type="submit" name="reset_btn" class="btn btn-lg btn-primary btn-round" style="background:#3f48cc;color:white"  value="Reset"><br>
 </form>
-<p class="mt-3" style="color:crimson">Already have password? <a href="login.php" class="text-white">Login here!</a></p>
+<p class="mt-3" style="color:crimson">Already have password? <a href="login" class="text-white">Login here!</a></p>
 </div>
   </div>
 
