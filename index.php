@@ -60,6 +60,7 @@ switch ($uri) {
         echo '404 - Page Not Found';
         break;
 }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
