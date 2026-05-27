@@ -13,22 +13,22 @@ $uri = trim($uri, '/');
 switch ($uri) {
     case '':
     case 'home':
-        require __DIR__ . '/home';
+        require __DIR__ . '/home.php';
         break;
     case 'about':
-        require __DIR__ . '/about';
+        require __DIR__ . '/about.php';
         break;
     case 'terms':
-        require __DIR__ . '/terms';
+        require __DIR__ . '/terms.php';
         break;
     case 'privacy':
-        require __DIR__ . '/privacy';
+        require __DIR__ . '/privacy.php';
         break;
     case 'faq':
-        require __DIR__ . '/faq';
+        require __DIR__ . '/faq.php';
         break;
     case 'contact':
-        require __DIR__ . '/contact';
+        require __DIR__ . '/contact.php';
         break;
     
     // If someone hits /dashboard, send to dashboard router
