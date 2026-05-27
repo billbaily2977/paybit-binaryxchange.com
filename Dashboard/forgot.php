@@ -1,6 +1,8 @@
-
-
-
+<?php
+session_start();
+include 'users_images.php';
+$imagePath = get_user_image_path();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
