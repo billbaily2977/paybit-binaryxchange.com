@@ -34,7 +34,7 @@ if (isset($routes[$uri])) {
 http_response_code(404);
 echo '404 - Page Not Found';
 
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 
