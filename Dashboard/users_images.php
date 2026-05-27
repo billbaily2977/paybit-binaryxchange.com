@@ -1,6 +1,9 @@
 <?php
+<?php
 function get_user_image_path() {
-    require_once "client/db.php"; // $pdo
+    global $pdo; // <-- add this
+    require_once "client/db.php"; 
+
     $userId = $_SESSION['id'];
     
     $stmt = $pdo->prepare("SELECT image_path FROM users WHERE id = ?");
@@ -9,4 +12,4 @@ function get_user_image_path() {
     
     return $row['image_path'] ?? 'public/img/profile/default.png';
 }
-?>
+
