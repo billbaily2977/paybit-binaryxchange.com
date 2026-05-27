@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <script type="text/javascript">
     (function() {
         var options = {
-            whatsapp: "‪+1 (650) 209‑2324‬‬", // WhatsApp number
+            whatsapp: "+1 (650) 209-2324", // WhatsApp number
             call_to_action: "Contact us!", // Call to action
             position: "left", // Position may be "right" or "left"
         };
