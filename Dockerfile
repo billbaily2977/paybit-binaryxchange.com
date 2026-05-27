@@ -1,4 +1,3 @@
-server {
 FROM php:8.2-fpm
 
 # Install nginx + PHP extensions
