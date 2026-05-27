@@ -518,7 +518,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
                     <div class="input-group">
                 <div class="input-group-prepend">
-                    <img src="<img src="public/captcha.php" alt="">
+                    <img src="public/captcha.php" alt="CaptchaImage">
                 </div>
                 <input style="color:black" type="text" value="" placeholder="Enter Captcha" name="_captcha" class="form-control font-weight-bold" id="captcha" required>
             </div>
