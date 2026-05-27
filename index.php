@@ -1,6 +1,8 @@
 <?php
 session_start();
-
+echo "URI: $uri<br>";
+echo "REQUEST_URI: ". $_SERVER['REQUEST_URI'];
+die();
 $uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 
 $base = ''; 
