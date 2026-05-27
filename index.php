@@ -1,50 +1,65 @@
 <?php
 session_start();
-echo "URI: $uri<br>";
-echo "REQUEST_URI: ". $_SERVER['REQUEST_URI'];
-die();
+
+// 1. Get the clean URL path
 $uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 
+// 2. Remove base folder if you have one. Leave empty for Render.
 $base = ''; 
 if ($base !== '' && strpos($uri, $base) === 0) {
     $uri = substr($uri, strlen($base));
 }
 $uri = trim($uri, '/');
 
+// 3. Route requests
 switch ($uri) {
+    
+    // Public pages
     case '':
     case 'home':
         require __DIR__ . '/home.php';
         break;
+        
     case 'about':
         require __DIR__ . '/about.php';
         break;
+        
     case 'terms':
         require __DIR__ . '/terms.php';
         break;
+        
     case 'privacy':
         require __DIR__ . '/privacy.php';
         break;
+        
     case 'faq':
         require __DIR__ . '/faq.php';
         break;
+        
     case 'contact':
         require __DIR__ . '/contact.php';
         break;
 
-    case 'login':
-    case 'register':
+    // Dashboard routes
+    case 'Dashboard/login':
+        require __DIR__ . '/Dashboard/login.php';
+        exit;
+        
+    case 'Dashboard/register':
+        require __DIR__ . '/Dashboard/register.php';
+        exit;
+        
     case 'dashboard':
     case 'Dashboard':
         require __DIR__ . '/Dashboard/index.php';
         exit;
 
+    // 404 fallback
     default:
         http_response_code(404);
         echo '404 - Page Not Found';
         break;
 }
-?>
 <!DOCTYPE html>
 <html lang="en">
 
