@@ -180,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="col-md-8 offset-md-8 text-left side_signing_full">
   <form class="form-signin1 full_side text-white " action="" method="POST">
-    <img style="width:100%;height:100%" src="/img/logo.png">
+    <img style="width:100%;height:100%" src="public/img/logo.png">
     <span>
     <h3 style="color:crimson;text-align:center"><?= htmlspecialchars($error) ?></h3>
     </span>
@@ -198,7 +198,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <br>
           <div class="input-group">
         <div class="input-group-prepend">
-          <img src="public/captcha" id="" alt="captchaImg" srcset="">
+          <img src="public/captcha.php" id="" alt="captchaImg" srcset="">
         </div>
         <input style="color:black" type="text" value="" placeholder="Enter Captcha" name="_captcha" class="form-control font-weight-bold" id="captcha" required>
       </div>
