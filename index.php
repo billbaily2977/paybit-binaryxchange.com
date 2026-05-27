@@ -1,18 +1,15 @@
 <?php
-session_start();
-$path = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
-$path = explode('/', $path);
-$page = $path[0] ?? 'home';
-$page = ($page === '') ? 'home' : $page;
-$pages = [
-    'Dashboard/login' => 'Dashboard/login.php',
-    'Dashboard/register' => 'Dashboard/register.php',
-];
-
-if (isset($pages[$page])) {
-    require_once dirname(__FILE__) . '/' . $pages[$page];
+echo "DB URL set: ". (getenv('DATABASE_URL')? 'yes' : 'no'). "<br>";
+try {
+    $url = getenv('DATABASE_URL');
+    $dsn = str_replace('postgresql://', 'pgsql://', $url);
+    $pdo = new PDO($dsn);
+    echo "Connected!";
+} catch (PDOException $e) {
+    echo "Failed: ". $e->getMessage();
 }
-?>
+die();
+
 <!DOCTYPE html>
 <html lang="en">
 
