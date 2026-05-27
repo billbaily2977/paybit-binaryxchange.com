@@ -124,7 +124,7 @@ $user['total_earning']  = $user['total_earning'] ?? 0.00;
   
 <header class="navbar-fixed">
   <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded">
-    <div class="sidebar-left"> <a class="navbar-brand imglogo" href="account.php"><img src="<?= $imagePath ?>" alt="user pic"></a>
+    <div class="sidebar-left"> <a class="navbar-brand imglogo" href="account.php"></a>
       <button class="btn btn-link icon-header mr-sm-2 pull-right menu-collapse"><span class="fa fa-bars"></span></button>
     </div>
     <div class="d-flex mr-auto"> &nbsp;</div>
@@ -217,7 +217,7 @@ $user['total_earning']  = $user['total_earning'] ?? 0.00;
     <div class="sidebar-right pull-right ">
       <ul class="navbar-nav  justify-content-end">
         <li class="nav-item">
-          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="userpic"><img src="<?php echo get_user_image_path(); ?>" alt="user pic"><span class="text"><?= $_SESSION['first_name'] ?></span></span>
+          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="userpic"><img src="<?php echo get_user_image_path(); ?>" alt="user pic"><span class="text"><?= $_SESSION['last_name'] ?></span></span>
           </button></li>
         <li><a href="logout.php" class="btn btn-link icon-header"><span class="fa fa-power-off"></span></a></li>
       </ul>
@@ -229,7 +229,7 @@ $user['total_earning']  = $user['total_earning'] ?? 0.00;
     <div class="list-unstyled btn-group">
       <button class="media btn btn-link" aria-haspopup="true" aria-expanded="false"> <span class="message_userpic">
         <img class="d-flex" src="<?php echo get_user_image_path(); ?>" alt="Generic user image"></span> 
-        <span class="media-body"> <span class="mt-0 mb-1"><?= $_SESSION['first_name'] ?></span> <small></small> </span> </button>
+        <span class="media-body"> <span class="mt-0 mb-1"><?= $_SESSION['first_name'] ?><?= $_SESSION['first_name'] ?></span> <small></small> </span> </button>
     </div>
   </div>
   <br>
