@@ -1,8 +1,8 @@
 <?php
 session_start();
 require_once "client/db.php";
-include 'users_images.php';
 
+// Must be logged in
 if (!isset($_SESSION['id'])) {
     header("Location: login.php");
     exit;
@@ -11,46 +11,88 @@ if (!isset($_SESSION['id'])) {
 $userId = $_SESSION['id'];
 $msg = "";
 
-if (isset($_POST['paid']) || isset($_POST['paida'])) {
-    $amount = floatval($_POST['amount']);
+// Only run on form submit
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && (isset($_POST['investment']) || isset($_POST['paid']) || isset($_POST['paida']))) {
+    
+    $amount = isset($_POST['invest']) ? $_POST['invest'] : ($_POST['amount'] ?? 0);
+    $amount = filter_var($amount, FILTER_VALIDATE_FLOAT);
     $action = $_POST['action'] ?? 'Deposit';
 
-    if ($amount < 10) {
+    // Validation
+    if ($amount === false || $amount < 10) {
         $msg = "Minimum deposit is $10";
-    } elseif (!isset($_FILES['file']) || $_FILES['file']['error'] !== 0) {
+    } elseif (!isset($_FILES['file']) || $_FILES['file']['error'] !== UPLOAD_ERR_OK) {
         $msg = "Please upload a payment proof";
     } else {
-        // Handle file upload
-        $uploadDir = "uploads/proofs/";
+        // File upload handling
+        $uploadDir = __DIR__ . "/uploads/proofs/";
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0777, true);
         }
 
-        $ext = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
-        $fileName = "proof_" . $userId . "_" . time() . "." . $ext;
-        $filePath = $uploadDir . $fileName;
-
+        $ext = strtolower(pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION));
         $allowed = ['jpg', 'jpeg', 'png', 'pdf'];
-        if (!in_array(strtolower($ext), $allowed)) {
+        
+        if (!in_array($ext, $allowed)) {
             $msg = "Only JPG, PNG, PDF allowed";
-        } elseif (move_uploaded_file($_FILES['file']['tmp_name'], $filePath)) {
-            
-            // 1. Insert deposit request
-            $stmt = $pdo->prepare("INSERT INTO deposits (user_id, amount, proof_path, status) VALUES (?, ?, 'pending')");
-            $stmt->execute([$userId, $amount, $filePath]);
-
-            // 2. Update total_deposit for tracking
-            $pdo->prepare("UPDATE users SET total_deposit = total_deposit + ? WHERE id = ?")
-                ->execute([$amount, $userId]);
-
-            $msg = "Deposit request of $$amount submitted. Wait for approval.";
         } else {
-            $msg = "File upload failed";
+            $fileName = "proof_" . $userId . "_" . time() . "." . $ext;
+            $filePath = $uploadDir . $fileName;
+            $dbPath = "uploads/proofs/" . $fileName;
+
+            if (move_uploaded_file($_FILES['file']['tmp_name'], $filePath)) {
+                
+                try {
+                    $pdo->beginTransaction();
+
+                    // 1. Insert deposit request as pending
+                    $stmt = $pdo->prepare("INSERT INTO deposits (user_id, amount, proof_path, status, created_at) 
+                                           VALUES (?, ?, 'pending', NOW())");
+                    $stmt->execute([$userId, $amount, $dbPath]);
+
+                    // 2. Auto-approve for now. Replace this with manual approval logic if needed
+                    $payment_ok = true; // Change this to your actual payment verification
+
+                    if ($payment_ok) {
+                        // Update deposit status
+                        $stmt = $pdo->prepare("UPDATE deposits SET status = 'completed' WHERE user_id = ? AND amount = ? AND status = 'pending' ORDER BY id DESC LIMIT 1");
+                        $stmt->execute([$userId, $amount]);
+
+                        // Update user balance and total deposit
+                        $stmt = $pdo->prepare("UPDATE users SET balance = balance + ?, total_deposit = total_deposit + ? WHERE id = ?");
+                        $stmt->execute([$amount, $amount, $userId]);
+
+                        $msg = "Deposit of $$amount successful! Funds added to your balance.";
+                    } else {
+                        $stmt = $pdo->prepare("UPDATE deposits SET status = 'failed' WHERE user_id = ? AND amount = ? AND status = 'pending' ORDER BY id DESC LIMIT 1");
+                        $stmt->execute([$userId, $amount]);
+                        $msg = "Payment failed. Please try again.";
+                    }
+
+                    $pdo->commit();
+
+                } catch (PDOException $e) {
+                    $pdo->rollBack();
+                    $msg = "Database error. Please contact support.";
+                    // error_log($e->getMessage()); // log for debugging
+                }
+
+            } else {
+                $msg = "File upload failed. Try again.";
+            }
         }
     }
-}
 
-$imagePath = get_user_image_path();
+    // Store message in session and redirect to account page
+    $_SESSION['msg'] = $msg;
+    header("Location: account.php");
+    exit;
+
+} else {
+    // If accessed directly without POST, send back to deposit
+    header("Location: deposit.php");
+    exit;
+}
 ?>
 
 
