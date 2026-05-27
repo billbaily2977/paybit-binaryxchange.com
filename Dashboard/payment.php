@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (isset($_POST['investment']) || iss
 
     // Store message in session and redirect to account page
     $_SESSION['msg'] = $msg;
-    header("Location: account.php");
+    header("Location: payment.php");
     exit;
 
 } else {
