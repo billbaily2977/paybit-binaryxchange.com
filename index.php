@@ -1136,7 +1136,7 @@ function googleTranslateElementInit() {
 
                     <ul class="footer-contact">
                         <li><i class="fa fa-map-marker"></i>45512 Westmeath Way Unit B32, Great Mills, MD 20634,</li>
-                                                    <li><i class="fa fa-whatsapp"></i> <span><a href="https://wa.me/"+1 (650) 209-2324"‬">‪+1 (650) 209‑2324‬</a></span></li>
+                                                    <li><i class="fa fa-whatsapp"></i> <span><a href="https://wa.me/+1 (650) 209-2324"‬>‪+1 (650) 209‑2324‬</a></span></li>
                                                 <li><i class="fa fa-envelope-o"></i> <span><a href="mailto:support@paybit-binaryxchange.com">support@paybit-binaryxchange.com</a></span></li>
                     </ul>
 
