@@ -4,7 +4,7 @@ require_once "client/db.php";
 include 'users_images.php';
 
 if (!isset($_SESSION['id'])) {
-    header("Location: login.php");
+    header("Location: login");
     exit;
 }
 
@@ -124,7 +124,7 @@ $user['total_earning']  = $user['total_earning'] ?? 0.00;
   
 <header class="navbar-fixed">
   <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded">
-    <div class="sidebar-left"> <a class="navbar-brand imglogo" href="account.php"></a>
+    <div class="sidebar-left"> <a class="navbar-brand imglogo" href="account"></a>
       <button class="btn btn-link icon-header mr-sm-2 pull-right menu-collapse"><span class="fa fa-bars"></span></button>
     </div>
     <div class="d-flex mr-auto"> &nbsp;</div>
@@ -219,7 +219,7 @@ $user['total_earning']  = $user['total_earning'] ?? 0.00;
         <li class="nav-item">
           <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="userpic"><img src="<?php echo get_user_image_path(); ?>" alt="user pic"><span class="text"><?= $_SESSION['last_name'] ?></span><?= $_SESSION['last_name'] ?></span>
           </button></li>
-        <li><a href="logout.php" class="btn btn-link icon-header"><span class="fa fa-power-off"></span></a></li>
+        <li><a href="logout" class="btn btn-link icon-header"><span class="fa fa-power-off"></span></a></li>
       </ul>
     </div>
   </nav>
@@ -235,14 +235,14 @@ $user['total_earning']  = $user['total_earning'] ?? 0.00;
   <br>
   <ul class="nav flex-column in" id="side-menu">
 
-    <li class="nav-item"> <a class="nav-link" href="account.php"><i class="fa fa-home"></i>Account</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="deposit.php"><i class="fa fa-money"></i>Deposit</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="withdraw.php"><i class="fa fa-briefcase"></i>Withdraw</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="history.php"><i class="fa fa-exchange"></i>History</a>
-    <li class="nav-item"> <a class="nav-link" href="transaction.php"><i class="fa fa-exchange"></i>Transactions</a>
-    <li class="nav-item"> <a class="nav-link" href="signal.php"><i class="fa fa-signal"></i>Signal Purchase</a>
-    <li class="nav-item"> <a class="nav-link" href="upgrade.php"><i class="fa fa-bank"></i>Account Upgrade</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="settings.php"><i class="fa fa-gear"></i>Account Settings</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="account"><i class="fa fa-home"></i>Account</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="deposit"><i class="fa fa-money"></i>Deposit</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="withdraw"><i class="fa fa-briefcase"></i>Withdraw</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="history"><i class="fa fa-exchange"></i>History</a>
+    <li class="nav-item"> <a class="nav-link" href="transaction"><i class="fa fa-exchange"></i>Transactions</a>
+    <li class="nav-item"> <a class="nav-link" href="signal"><i class="fa fa-signal"></i>Signal Purchase</a>
+    <li class="nav-item"> <a class="nav-link" href="upgrade"><i class="fa fa-bank"></i>Account Upgrade</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="settings"><i class="fa fa-gear"></i>Account Settings</a> </li>
     <li class="nav-item"> <a class="nav-link" href="mailto:support@paybit-binaryxchange.com"><i class="fa fa-comment"></i>Contact Support</a> </li>
     <li class="nav-item "> <a href="javascript:void(0)" class="menudropdown nav-link">Where to Buy Coin<i class="fa fa-angle-down "></i></a>
       <ul class="nav flex-column nav-second-level ">
@@ -260,7 +260,7 @@ $user['total_earning']  = $user['total_earning'] ?? 0.00;
       </ul>
       <!-- /.nav-second-level -->
     </li>
-    <li class="nav-item"> <a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i>Logout</a></li>
+    <li class="nav-item"> <a class="nav-link" href="logout"><i class="fa fa-power-off"></i>Logout</a></li>
   </ul>
   <hr>
   <ul class="nav flex-column in">
@@ -370,11 +370,11 @@ $user['total_earning']  = $user['total_earning'] ?? 0.00;
           <div class="activity-block success" id="bck">
                <div class="media">
                     <div class="media-body">
-                         <a href="history.php"><button type="button" class="btn btn-success"><i class="fa fa-exchange"></i> Trading History</button></a>
-                         <a href="settings.php"><button type="button" style="float:right" class="btn btn-danger"><i class="fa fa-gears"></i> Settings</button></a>
+                         <a href="history"><button type="button" class="btn btn-success"><i class="fa fa-exchange"></i> Trading History</button></a>
+                         <a href="settings"><button type="button" style="float:right" class="btn btn-danger"><i class="fa fa-gears"></i> Settings</button></a>
                          <hr>
-                         <a href="transaction.php"><button type="button" style="float:center" class="btn btn-success"><i class="fa fa-exchange"></i> View Transactions</button></a>
-                                                       <a href="signal.php"><button type="button" style="float:right" class="btn btn-success"><i class="fa fa-signal"></i> Signal Purchase</button></a>
+                         <a href="transaction"><button type="button" style="float:center" class="btn btn-success"><i class="fa fa-exchange"></i> View Transactions</button></a>
+                                                       <a href="signal"><button type="button" style="float:right" class="btn btn-success"><i class="fa fa-signal"></i> Signal Purchase</button></a>
                                                   <br>
                          <hr>
                                                   <a style="float:left;font-size:20px;font-weight:bold">Package</a>
