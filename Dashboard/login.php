@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION["id"])) {
-    header("Location: account.php");
+    header("Location: account");
     exit;
 }
 
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $_SESSION['currency']   = $user['currency'];
                     $_SESSION['number']     = $user['number'];
 
-                    header("Location: account.php");
+                    header("Location: account");
                     exit;
                 } else {
                     $error = "Invalid email or password";
@@ -164,8 +164,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <ul class="navbar-nav  justify-content-end">
           <li style="margin:4px"><a href="#" class="btn btn-link text-white"></a></li>
           <li style="margin:4px"><a href="../home " style="background:#3f48cc;color:white" class="btn btn-primary">Home</a></li>
-          <li style="margin:4px"><a href="login.php" style="background:#3f48cc;color:white" class="btn btn-primary">Login</a></li>
-          <li style="margin:4px"><a href="register.php" style="background:#3f48cc;color:white" class="btn btn-primary">Register</a></li>
+          <li style="margin:4px"><a href="login" style="background:#3f48cc;color:white" class="btn btn-primary">Login</a></li>
+          <li style="margin:4px"><a href="register" style="background:#3f48cc;color:white" class="btn btn-primary">Register</a></li>
         </ul>
       </div>
     </nav>
@@ -198,7 +198,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <br>
           <div class="input-group">
         <div class="input-group-prepend">
-          <img src="public/captcha.php" id="" alt="captchaImg" srcset="">
+          <img src="public/captcha" id="" alt="captchaImg" srcset="">
         </div>
         <input style="color:black" type="text" value="" placeholder="Enter Captcha" name="_captcha" class="form-control font-weight-bold" id="captcha" required>
       </div>
@@ -208,8 +208,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <br>
     <input type="submit" name="login_btn" style="background:#3f48cc;color:white" class="btn btn-lg btn-primary" value="Login"><br>
     <br>
-    <p class="mt-3"><a href="register.php" class="text-white">Register here!</a> <br>
-      <a style="color:#0080db" href="forgot.php" class="">Forgot password?</a>
+    <p class="mt-3"><a href="register" class="text-white">Register here!</a> <br>
+      <a style="color:#0080db" href="forgot" class="">Forgot password?</a>
     </p>
   </form>
   <br>
