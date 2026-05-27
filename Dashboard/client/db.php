@@ -26,8 +26,3 @@ function connectDB() {
 }
 
 $pdo = connectDB();
-    
-    return new PDO($dsn, $user, $pass, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-    ]);
-}
