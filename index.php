@@ -9,6 +9,7 @@ try {
     echo "Failed: ". $e->getMessage();
 }
 die();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
