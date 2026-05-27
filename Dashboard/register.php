@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $err = true;
             }
         } catch (PDOException $e) {
-            $globalErr = "Database error. Try again.";
+            $globalErr = "Database error: " . $e->getMessage();
             $err = true;
         }
     }
@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit;
 
         } catch (PDOException $e) {
-            $globalErr = "Registration failed. Try again.";
+            $globalErr = "Registration failed: " . $e->getMessage();
         }
     }
 }
