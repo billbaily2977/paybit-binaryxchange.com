@@ -1,5 +1,4 @@
 <?php
-<?php
 session_start();
 require_once "client/db.php";
 include 'users_images.php';
