@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $hashedPassword, $country, $currency, $accountStr, $referral
             ]);
 
-            header("Location: login.php?registered=1");
+            header("Location: login?registered=1");
             exit;
 
         } catch (PDOException $e) {
@@ -183,14 +183,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   <header class="navbar-fixed">
     <nav class="navbar navbar-toggleable-md sign-in-header">
-      <div class="sidebar-left"> <a class="navbar-brand imglogo" href="index.php"></a> </div>
+      <div class="sidebar-left"> <a class="navbar-brand imglogo" href="index"></a> </div>
       <div class="col"></div>
       <div class="sidebar-right pull-right">
         <ul class="navbar-nav  justify-content-end">
           <li style="margin:4px"><a href="#" class="btn btn-link text-white"></a></li>
           <li style="margin:4px"><a href="../home" style="background:#3f48cc;color:white" class="btn btn-primary">Home</a></li>
-          <li style="margin:4px"><a href="login.php" style="background:#3f48cc;color:white" class="btn btn-primary">Login</a></li>
-          <li style="margin:4px"><a href="register.php" style="background:#3f48cc;color:white" class="btn btn-primary">Register</a></li>
+          <li style="margin:4px"><a href="login" style="background:#3f48cc;color:white" class="btn btn-primary">Login</a></li>
+          <li style="margin:4px"><a href="register" style="background:#3f48cc;color:white" class="btn btn-primary">Register</a></li>
         </ul>
       </div>
     </nav>
@@ -517,7 +517,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
                     <div class="input-group">
                 <div class="input-group-prepend">
-                    <img src="public/captcha.php" alt="CaptchaImage">
+                    <img src="public/captcha" alt="CaptchaImage">
                 </div>
                 <input style="color:black" type="text" value="" placeholder="Enter Captcha" name="_captcha" class="form-control font-weight-bold" id="captcha" required>
             </div>
