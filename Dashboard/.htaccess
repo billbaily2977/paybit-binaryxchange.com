@@ -1,10 +1,7 @@
 RewriteEngine On
 RewriteBase /Dashboard/
 
-# Remove .php extension
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.+)$ $1.php [L]
 
-# Remove trailing slash
-RewriteRule ^(.+)/$ /$1 [R=301,L]
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
