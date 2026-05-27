@@ -1,14 +1,17 @@
-FROM php:8.2-cli
+server {
+    listen 80;
+    server_name _;
+    root /var/www/html;
+    index.php index.html;
 
-RUN apt-get update && apt-get install -y \
-    libpq-dev \
-    libpng-dev \
-    libjpeg-dev \
-    libfreetype6-dev \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo pdo_pgsql gd
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
 
-WORKDIR /app
-COPY . .
-
-CMD ["php", "-S", "0.0.0.0:10000", "-t", "."]
+    location ~ \.php$ {
+        include fastcgi_params;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
+    }
+}
