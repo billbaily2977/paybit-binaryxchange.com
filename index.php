@@ -1,3 +1,54 @@
+<?php
+session_start();
+
+$uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+
+// Remove base folder if your app is in a subfolder
+$base = 'public_html'; // change if needed, or leave empty ''
+if ($base !== '' && strpos($uri, $base) === 0) {
+    $uri = substr($uri, strlen($base));
+}
+$uri = trim($uri, '/');
+
+switch ($uri) {
+    case '':
+    case 'home':
+        require __DIR__ . '/home.php';
+        break;
+    case 'about':
+        require __DIR__ . '/about.php';
+        break;
+    case 'terms':
+        require __DIR__ . '/terms.php';
+        break;
+    case 'privacy':
+        require __DIR__ . '/privacy.php';
+        break;
+    case 'faq':
+        require __DIR__ . '/faq.php';
+        break;
+    case 'contact':
+        require __DIR__ . '/contact.php';
+        break;
+
+    // Route these to dashboard
+    case 'login':
+    case 'register':
+        // Let dashboard router handle it
+        require __DIR__ . '/Dashboard/index.php';
+        break;
+    
+    // If someone hits /dashboard, send to dashboard router
+    case 'Dashboard':
+    case 'dashboard':
+        require __DIR__ . '/Dashboard/index.php';
+        break;
+    
+    default:
+        http_response_code(404);
+        echo '404 - Page Not Found';
+        break;
+}
 <!DOCTYPE html>
 <html lang="en">
 
