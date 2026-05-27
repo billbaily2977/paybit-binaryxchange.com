@@ -3,8 +3,7 @@ session_start();
 
 $uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 
-// Remove base folder if your app is in a subfolder
-$base = 'public_html'; // change if needed, or leave empty ''
+$base = 'public_html'; 
 if ($base !== '' && strpos($uri, $base) === 0) {
     $uri = substr($uri, strlen($base));
 }
@@ -31,19 +30,13 @@ switch ($uri) {
         require __DIR__ . '/contact.php';
         break;
 
-    // Route these to dashboard
     case 'login':
     case 'register':
-        // Let dashboard router handle it
-        require __DIR__ . '/Dashboard/index.php';
-        break;
-    
-    // If someone hits /dashboard, send to dashboard router
-    case 'Dashboard':
     case 'dashboard':
+    case 'Dashboard':
         require __DIR__ . '/Dashboard/index.php';
-        break;
-    
+        exit;
+
     default:
         http_response_code(404);
         echo '404 - Page Not Found';
