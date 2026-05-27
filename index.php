@@ -1,3 +1,48 @@
+<?php
+session_start();
+
+$uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+
+// Remove base folder if your app is in a subfolder
+$base = 'public_html'; // change if needed, or leave empty ''
+if ($base !== '' && strpos($uri, $base) === 0) {
+    $uri = substr($uri, strlen($base));
+}
+$uri = trim($uri, '/');
+
+switch ($uri) {
+    case '':
+    case 'home':
+        require __DIR__ . '/home';
+        break;
+    case 'about':
+        require __DIR__ . '/about';
+        break;
+    case 'terms':
+        require __DIR__ . '/terms';
+        break;
+    case 'privacy':
+        require __DIR__ . '/privacy';
+        break;
+    case 'faq':
+        require __DIR__ . '/faq';
+        break;
+    case 'contact':
+        require __DIR__ . '/contact';
+        break;
+    
+    // If someone hits /dashboard, send to dashboard router
+    case 'Dashboard':
+    case 'dashboard':
+        header('Location: /Dashboard');
+        exit;
+    
+    default:
+        http_response_code(404);
+        echo '404 - Page Not Found';
+        break;
+}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -139,10 +184,10 @@ function googleTranslateElementInit() {
                     <a data-scroll href="contact">Contact</a>
                 </li>
                                     <li>
-                        <a data-scroll href="Dashboard/login.php">login</a>
+                        <a data-scroll href="Dashboard/login">login</a>
                     </li>
                     <li class="quote" style="color:white;border-radius:5px">
-                        <a href="Dashboard/register.php" style="color:white">Get Started</a>
+                        <a href="Dashboard/register" style="color:white">Get Started</a>
                     </li>
                             </ul>
         </div>
@@ -179,8 +224,8 @@ function googleTranslateElementInit() {
                                         <h5 style="color:white" class="lead h5-md mt30 mb20">Trade in the world’s Top
                                             Financial Markets, with a simple and user friendly online platform<br>A Firm
                                             for Trading Stock, Forex, Bitcoin mining, Binary and CryptoCurrency trading.</h5>
-                                        <a href="Dashboard/login.php" style="border: 1px solid white" class="btn btn-hero btn-circle">Login Account</a>
-                                        <a href="Dashboard/register.php" style="border: 1px solid black" class="btn btn-white btn-circle">Create An Account</a>
+                                        <a href="Dashboard/login" style="border: 1px solid white" class="btn btn-hero btn-circle">Login Account</a>
+                                        <a href="Dashboard/register" style="border: 1px solid black" class="btn btn-white btn-circle">Create An Account</a>
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +329,7 @@ function googleTranslateElementInit() {
                     <div class="row">
                         <div class="col-md-4 col-sm-4">
                             <div class="work-inner-box">
-                                <a href="Dashboard/register.php">
+                                <a href="Dashboard/register">
                                     <div class="icon-box work-icon icon-lg">
                                         <img src="public/img/icon/icon1.png" alt="" class="img-responsive">
                                     </div>
@@ -546,7 +591,7 @@ function googleTranslateElementInit() {
                 <li>Multiple Investments Allowed</li>
                 <li>3% Referral Bonus</li>
                 <li>24/7 Customer Care</li>
-                <li class="grey"><a href="Dashboard/register.php" class="button">Get Started</a></li>
+                <li class="grey"><a href="Dashboard/register" class="button">Get Started</a></li>
             </ul>
         </div>
 
@@ -558,7 +603,7 @@ function googleTranslateElementInit() {
                 <li>Multiple Investments Allowed</li>
                 <li>4% Referral Bonus</li>
                 <li>24/7 Customer Care</li>
-                <li class="grey"><a href="Dashboard/register.php" class="button">Get Started</a></li>
+                <li class="grey"><a href="Dashboard/register" class="button">Get Started</a></li>
             </ul>
         </div>
 
@@ -570,7 +615,7 @@ function googleTranslateElementInit() {
                 <li>Multiple Investments Allowed</li>
                 <li>6% Referral Bonus</li>
                 <li>24/7 Customer Care</li>
-                <li class="grey"><a href="Dashboard/register.php" class="button">Get Started</a></li>
+                <li class="grey"><a href="Dashboard/register" class="button">Get Started</a></li>
             </ul>
         </div>
 
@@ -583,7 +628,7 @@ function googleTranslateElementInit() {
                 <li>Multiple Investments Allowed</li>
                 <li>8% Referral Bonus</li>
                 <li>24/7 Customer Care</li>
-                <li class="grey"><a href="Dashboard/register.php" class="button">Get Started</a></li>
+                <li class="grey"><a href="Dashboard/register" class="button">Get Started</a></li>
             </ul>
         </div>
 
