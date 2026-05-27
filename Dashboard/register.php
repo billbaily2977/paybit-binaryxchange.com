@@ -26,11 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $err = false;
 
-        // Start session if not already started
-    if (session_status() === PHP_SESSION_NONE) {
-        session_start();
-    }
-
     // Captcha check
     $captcha_input = trim($_POST['_captcha'] ?? '');
     if (empty($captcha_input) || !isset($_SESSION['captcha']) || strtolower($captcha_input) !== strtolower($_SESSION['captcha'])) {
@@ -523,7 +518,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
                     <div class="input-group">
                 <div class="input-group-prepend">
-                    <img src="public/captcha" alt="" srcset="">
+                    <img src="<img src="public/captcha.php" alt="">
                 </div>
                 <input style="color:black" type="text" value="" placeholder="Enter Captcha" name="_captcha" class="form-control font-weight-bold" id="captcha" required>
             </div>
