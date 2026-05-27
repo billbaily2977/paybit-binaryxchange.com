@@ -3,7 +3,7 @@ session_start();
 
 $uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 
-$base = 'public_html'; 
+$base = ''; 
 if ($base !== '' && strpos($uri, $base) === 0) {
     $uri = substr($uri, strlen($base));
 }
