@@ -13,40 +13,40 @@ switch ($uri) {
     
     case '':
     case 'home':
-        require __DIR__ . '/home.php';
+        require __DIR__ . 'home.php';
         break;
         
     case 'about':
-        require __DIR__ . '/about.php';
+        require __DIR__ . 'about.php';
         exit;
         
     case 'terms':
-        require __DIR__ . '/terms.php';
+        require __DIR__ . 'terms.php';
         exit;
         
     case 'privacy':
-        require __DIR__ . '/privacy.php';
+        require __DIR__ . 'privacy.php';
         exit;
         
     case 'faq':
-        require __DIR__ . '/faq.php';
+        require __DIR__ . 'faq.php';
         exit;
         
     case 'contact':
-        require __DIR__ . '/contact.php';
+        require __DIR__ . 'contact.php';
         exit;
 
     case 'Dashboard/login':
-        require __DIR__ . '/Dashboard/login.php';
+        require __DIR__ . 'Dashboard/login.php';
         exit;
         
     case 'Dashboard/register':
-        require __DIR__ . '/Dashboard/register.php';
+        require __DIR__ . 'Dashboard/register.php';
         exit;
         
     case 'dashboard':
     case 'Dashboard':
-        require __DIR__ . '/Dashboard/index.php';
+        require __DIR__ . 'Dashboard/index.php';
         exit;
 
     default:
