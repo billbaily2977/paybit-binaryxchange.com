@@ -138,10 +138,10 @@ function googleTranslateElementInit() {
                     <a data-scroll href="contact">Contact</a>
                 </li>
                                     <li>
-                        <a data-scroll href="Dashboard/login">Dashboard/login</a>
+                        <a data-scroll href="Dashboard/login.php">Dashboard/login.php</a>
                     </li>
                     <li class="quote" style="color:white;border-radius:5px">
-                        <a href="Dashboard/register" style="color:white">Get Started</a>
+                        <a href="Dashboard/register.php.php" style="color:white">Get Started</a>
                     </li>
                             </ul>
         </div>
@@ -179,8 +179,8 @@ function googleTranslateElementInit() {
                                         <h5 style="color:white" class="lead h5-md mt30 mb20">Trade in the world’s Top
                                             Financial Markets, with a simple and user friendly online platform<br>A Firm
                                             for Trading Stock, Forex, Bitcoin mining, Binary and CryptoCurrency trading.</h5>
-                                        <a href="Dashboard/login" style="border: 1px solid white" class="btn btn-hero btn-circle">Dashboard/login Account</a>
-                                        <a href="Dashboard/register" style="border: 1px solid black" class="btn btn-white btn-circle">Create An Account</a>
+                                        <a href="Dashboard/login.php" style="border: 1px solid white" class="btn btn-hero btn-circle">login Account</a>
+                                        <a href="Dashboard/register.php.php" style="border: 1px solid black" class="btn btn-white btn-circle">Create An Account</a>
                                     </div>
                                 </div>
                             </div>
@@ -283,20 +283,20 @@ function googleTranslateElementInit() {
                     <div class="row">
                         <div class="col-md-4 col-sm-4">
                             <div class="work-inner-box">
-                                <a href="Dashboard/register">
+                                <a href="Dashboard/register.php.php">
                                     <div class="icon-box work-icon icon-lg">
                                         <img src="public/img/icon/icon1.png" alt="" class="img-responsive">
                                     </div>
                                 </a>
                                 <h4>Create An Account</h4>
-                                <p>Simply click on the Dashboard/register button to create an account for free. It's quick and
+                                <p>Simply click on the register button to create an account for free. It's quick and
                                     easy.</p>
                             </div>
                         </div>
 
                         <div class="col-md-4 col-sm-4">
                             <div class="work-inner-box">
-                                <a href="Dashboard/login">
+                                <a href="Dashboard/login.php">
                                     <div class="icon-box work-icon icon-lg">
                                         <img src="public/img/icon/icon2.png" alt="" class="img-responsive">
                                     </div>
@@ -308,7 +308,7 @@ function googleTranslateElementInit() {
                         </div>
                         <div class="col-md-4 col-sm-4">
                             <div class="work-inner-box">
-                                <a href="Dashboard/login">
+                                <a href="Dashboard/login.php">
                                     <div class="icon-box work-icon icon-lg">
                                         <img src="public/img/icon/icon3.png" alt="" class="img-responsive">
                                     </div>
@@ -545,7 +545,7 @@ function googleTranslateElementInit() {
                 <li>Multiple Investments Allowed</li>
                 <li>3% Referral Bonus</li>
                 <li>24/7 Customer Care</li>
-                <li class="grey"><a href="Dashboard/register" class="button">Get Started</a></li>
+                <li class="grey"><a href="Dashboard/register.php.php" class="button">Get Started</a></li>
             </ul>
         </div>
 
@@ -557,7 +557,7 @@ function googleTranslateElementInit() {
                 <li>Multiple Investments Allowed</li>
                 <li>4% Referral Bonus</li>
                 <li>24/7 Customer Care</li>
-                <li class="grey"><a href="Dashboard/register" class="button">Get Started</a></li>
+                <li class="grey"><a href="Dashboard/register.php.php" class="button">Get Started</a></li>
             </ul>
         </div>
 
@@ -569,7 +569,7 @@ function googleTranslateElementInit() {
                 <li>Multiple Investments Allowed</li>
                 <li>6% Referral Bonus</li>
                 <li>24/7 Customer Care</li>
-                <li class="grey"><a href="Dashboard/register" class="button">Get Started</a></li>
+                <li class="grey"><a href="Dashboard/register.php.php" class="button">Get Started</a></li>
             </ul>
         </div>
 
@@ -582,7 +582,7 @@ function googleTranslateElementInit() {
                 <li>Multiple Investments Allowed</li>
                 <li>8% Referral Bonus</li>
                 <li>24/7 Customer Care</li>
-                <li class="grey"><a href="Dashboard/register" class="button">Get Started</a></li>
+                <li class="grey"><a href="Dashboard/register.php.php" class="button">Get Started</a></li>
             </ul>
         </div>
 
