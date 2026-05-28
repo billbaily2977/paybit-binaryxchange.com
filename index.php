@@ -40,15 +40,15 @@ switch ($uri) {
         exit;
 
     case 'login':
-        require __DIR__ . '/../Dashboard/login.php';
+        require __DIR__ . '/Dashboard/login.php';
         exit;
         
     case 'register':
-        require __DIR__ . '/../Dashboard/register.php';
+        require __DIR__ . '/Dashboard/register.php';
         exit;
         
     case 'Dashboard':
-        require __DIR__ . '/../Dashboard/index.php';
+        require __DIR__ . '/Dashboard/index.php';
         exit;
 
     default:
