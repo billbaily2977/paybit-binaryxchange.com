@@ -1,16 +1,18 @@
 FROM php:8.2-apache
 
-RUN apt-get update && apt-get install -y \
-    libpq-dev libpng-dev libjpeg-dev libfreetype6-dev libzip-dev unzip git \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd pdo_pgsql pgsql zip
-
-COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
-
+# Set working directory
 WORKDIR /var/www/html
-COPY . .
 
-RUN composer install --no-dev --optimize-autoloader
+# Install common PHP extensions you might need
+RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    libzip-dev \
+    libpng-dev \
+    libonig-dev \
+    libxml2-dev \
+    && docker-php-ext-install pdo_mysql mbstring zip gd opcache \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-EXPOSE 80
-CMD ["apache2-foreground"]
+# Enable Apache mod_rewrite for Laravel, CodeIgniter, etc.
+RUN a2en
