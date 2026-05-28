@@ -25,7 +25,7 @@ switch ($uri) {
         exit;
         
     case 'privacy':
-        require __DIR__ . 'privacy.php';
+        require __DIR__ . '/privacy.php';
         exit;
         
     case 'faq':
@@ -48,7 +48,6 @@ switch ($uri) {
         exit;
         
     case 'dashboard':
-    case 'Dashboard':
         require __DIR__ . '/Dashboard/index.php';
         exit;
 
