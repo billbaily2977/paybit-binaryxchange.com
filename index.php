@@ -39,11 +39,11 @@ switch ($uri) {
         require __DIR__ . '/privacy.php';
         exit;
 
-    case 'Dashboard/login':
+    case 'login':
         require __DIR__ . '/Dashboard/login.php';
         exit;
         
-    case 'Dashboard/register':
+    case 'register':
         require __DIR__ . '/Dashboard/register.php';
         exit;
         
