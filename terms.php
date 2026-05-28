@@ -11,7 +11,7 @@
 	<meta property="og:image" content="https://PayBit-BinaryXchange.com/img/fb.png">
     <meta property="og:url" content="https://PayBit-BinaryXchange.com">
 
-    <link href="img/assets/favicon.png" rel="icon" type="image/ico">
+    <link href="public/img/assets/favicon.png" rel="icon" type="image/ico">
 
     <link href="public/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="public/css/style.css" rel="stylesheet" type="text/css">
