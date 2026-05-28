@@ -35,6 +35,9 @@ switch ($uri) {
     case 'contact':
         require __DIR__ . '/contact.php';
         exit;
+	case 'privacy':
+        require __DIR__ . '/privacy.php';
+        exit;
 
     case 'Dashboard/login':
         require __DIR__ . '/Dashboard/login.php';
