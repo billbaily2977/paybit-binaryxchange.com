@@ -17,7 +17,9 @@ COPY nginx.conf /etc/nginx/sites-available/default
 
 EXPOSE 10000
 
-CMD envsubst '$PORT' < /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default \
+CMD echo "PORT=$PORT" \
+    && envsubst '$PORT' < /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default \
+    && grep "listen" /etc/nginx/sites-enabled/default \
     && nginx -t \
     && php-fpm -D \
     && nginx -g "daemon off;"
