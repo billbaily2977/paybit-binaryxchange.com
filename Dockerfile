@@ -19,7 +19,10 @@ EXPOSE 10000
 
 CMD echo "PORT=$PORT" \
     && envsubst '$PORT' < /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default \
-    && grep "listen" /etc/nginx/sites-enabled/default \
+    && echo "--- nginx config after envsubst ---" \
+    && cat /etc/nginx/sites-enabled/default \
+    && echo "--- testing nginx ---" \
     && nginx -t \
+    && echo "--- starting php-fpm ---" \
     && php-fpm -D \
     && nginx -g "daemon off;"
