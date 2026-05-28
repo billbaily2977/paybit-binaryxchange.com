@@ -11,16 +11,16 @@
 	<meta property="og:image" content="https://PayBit-BinaryXchange.com/img/fb.png">
     <meta property="og:url" content="https://PayBit-BinaryXchange.com">
 
-    <link href="img/assets/favicon.png" rel="icon" type="image/ico">
+    <link href="public/img/assets/favicon.png" rel="icon" type="image/ico">
 
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/effects.css" rel="stylesheet" type="text/css">
-    <link href="css/backgrounds.css" rel="stylesheet" type="text/css">
+    <link href="public/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="public/css/style.css" rel="stylesheet" type="text/css">
+    <link href="public/css/effects.css" rel="stylesheet" type="text/css">
+    <link href="public/css/backgrounds.css" rel="stylesheet" type="text/css">
 
-    <link href="fonts/FontAwesome/stylesheet.css" rel="stylesheet" type="text/css">
-    <link href="fonts/Ion%20Icons/stylesheet.css" rel="stylesheet" type="text/css">
-    <link href="fonts/ElegantThemes%20Icons/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="public/fonts/FontAwesome/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="public/fonts/Ion%20Icons/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="public/fonts/ElegantThemes%20Icons/stylesheet.css" rel="stylesheet" type="text/css">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -105,8 +105,8 @@
                 <span class="icon-bar bottom-bar"></span>
             </button>
             <a data-scroll href="#hero" class="navbar-brand">
-                <img style="margin-left:-3px;float:left;max-width:196px" src="img/assets/logo-dark.png" class="logo-dark" alt="#">
-                <img style="margin-left:-4px; float:left;max-width:196px" src="img/assets/logo-light.png" class="logo-light" alt="#">
+                <img style="margin-left:-3px;float:left;max-width:196px" src="public/img/assets/logo-dark.png" class="logo-dark" alt="#">
+                <img style="margin-left:-4px; float:left;max-width:196px" src="public/img/assets/logo-light.png" class="logo-light" alt="#">
 
             </a>
             <div id="google_translate_element" align="center" style="float:center;margin-left:230px"></div>
@@ -201,7 +201,7 @@ function googleTranslateElementInit() {
     <div class="col-md-6">
         <!-- hidden-xs -->
         <div class="price-chart-img">
-            <img src="img/icon/man-3.png" alt="" class="img-responsive">
+            <img src="public/img/icon/man-3.png" alt="" class="img-responsive">
         </div>
         <!-- <div class="about-bg"></div> -->
     </div>
@@ -216,22 +216,22 @@ function googleTranslateElementInit() {
     <div class="row">
         <div class="col-md-3 col-sm-6">
             <div class="client-logo">
-                <img src="img/icon/11.png" alt="" class="img-responsive center-block">
+                <img src="public/img/icon/11.png" alt="" class="img-responsive center-block">
             </div>
         </div>
         <div class="col-md-3 col-sm-6">
             <div class="client-logo">
-                <img src="img/icon/12.png" alt="" class="img-responsive center-block">
+                <img src="public/img/icon/12.png" alt="" class="img-responsive center-block">
             </div>
         </div>
         <div class="col-md-3 col-sm-6">
             <div class="client-logo">
-                <img src="img/icon/13.png" alt="" class="img-responsive center-block">
+                <img src="public/img/icon/13.png" alt="" class="img-responsive center-block">
             </div>
         </div>
         <div class="col-md-3 col-sm-6">
             <div class="client-logo">
-                <img src="img/icon/14.png" alt="" class="img-responsive center-block">
+                <img src="public/img/icon/14.png" alt="" class="img-responsive center-block">
             </div>
         </div>
     </div>
@@ -313,7 +313,7 @@ function googleTranslateElementInit() {
 
             <div class="col-md-3 col-sm-6">
                 <div class="widget news-widget">
-                    <img src="img/assets/logo-light.png" alt="" style="max-width:196px">
+                    <img src="public/img/assets/logo-light.png" alt="" style="max-width:196px">
                     <p>
                         PayBit-BinaryXchange is a fully automated trading and crypto mining platform that gives you full
                         control of your investment, and allows you to withdraw your capital
@@ -363,7 +363,7 @@ function googleTranslateElementInit() {
             <div class="col-md-3 col-sm-4">
                 <div class="widget footer-widget">
                     <h4>Highly Secured Data</h4>
-                    <img src="img/icon/secure.png" alt="">
+                    <img src="public/img/icon/secure.png" alt="">
                 </div>
             </div>
 
@@ -443,12 +443,12 @@ function googleTranslateElementInit() {
 
 
 <!--   JQUERY FILES     -->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/waypoint.min.js"></script>
-<script src="js/counterup.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/scripts.js"></script>
+<script src="public/js/jquery.min.js"></script>
+<script src="public/js/bootstrap.min.js"></script>
+<script src="public/js/waypoint.min.js"></script>
+<script src="public/js/counterup.min.js"></script>
+<script src="public/js/plugins.js"></script>
+<script src="public/js/scripts.js"></script>
 
 <script>
     $(document).keydown(function(event) {
