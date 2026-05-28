@@ -37,7 +37,7 @@ switch ($uri) {
         exit;
 
     case 'Dashboard/login':
-        require __DIR__ . 'Dashboard/login.php';
+        require __DIR__ . '/Dashboard/login.php';
         exit;
         
     case 'Dashboard/register':
