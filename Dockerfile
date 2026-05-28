@@ -1,10 +1,14 @@
-FROM php:8.2-apache
+FROM php:8.2-cli
 
-# Copy everything to Apache's web root
-COPY . /var/www/html/
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install pdo pdo_pgsql gd
 
-# Fix permissions so Apache can read files
-RUN chown -R www-data:www-data /var/www/html
+WORKDIR /app
+COPY . .
 
-# Apache listens on 80 by default
-EXPOSE 80
+CMD ["php", "-S", "0.0.0.0:10000", "-t", "."]
