@@ -19,12 +19,12 @@ $routes = [
     'withdraw' => 'withdraw.php',
 ];
 
+// Get URI and strip Dashboard/ prefix
 $uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
-$uri = str_replace('Dashboard/', '', $uri);
-$uri = str_replace('dashboard/', '', $uri);
+$uri = preg_replace('#^Dashboard/#i', '', $uri);
 
 if (isset($routes[$uri])) {
-    $file = __DIR__ . '/' . $routes[$uri];
+    $file = __DIR__. '/'. $routes[$uri];
     if (file_exists($file)) {
         require $file;
         exit;
