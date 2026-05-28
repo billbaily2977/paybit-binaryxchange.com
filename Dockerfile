@@ -1,28 +1,38 @@
-FROM php:8.2-fpm
+FROM php:8.2-apache
 
+# Enable mod_rewrite for clean URLs
+RUN a2enmod rewrite
+
+# Install PHP extensions for Postgres + common stuff
 RUN apt-get update && apt-get install -y \
-    nginx \
-    gettext-base \
     libpq-dev \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
+    libzip-dev \
+    unzip \
+    git \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo pdo_pgsql gd \
-    && rm -rf /var/lib/apt/lists/*
+    && docker-php-ext-install gd pdo_pgsql pgsql zip
 
+# Install Composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+# Set working dir
 WORKDIR /var/www/html
+
+# Copy project files
 COPY . .
-COPY nginx.conf /etc/nginx/sites-available/default
 
-# Make sure sites-enabled exists and disable default site
-RUN mkdir -p /etc/nginx/sites-enabled \
-    && rm -f /etc/nginx/sites-enabled/default
+# Install PHP dependencies
+RUN composer install --no-dev --optimize-autoloader
 
-EXPOSE 10000
+# Point Apache to /public folder
+ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/000-default.conf
 
-CMD envsubst '$PORT' < /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default \
-    && ln -sf /etc/nginx/sites-enabled/default /etc/nginx/conf.d/default.conf \
-    && nginx -t \
-    && php-fpm -D \
-    && nginx -g "daemon off;"
+# Set permissions
+RUN chown -R www-data:www-data /var/www/html
+
+EXPOSE 80
+CMD ["apache2-foreground"]
