@@ -15,14 +15,14 @@ WORKDIR /var/www/html
 COPY . .
 COPY nginx.conf /etc/nginx/sites-available/default
 
+# Make sure sites-enabled exists and disable default site
+RUN mkdir -p /etc/nginx/sites-enabled \
+    && rm -f /etc/nginx/sites-enabled/default
+
 EXPOSE 10000
 
-CMD echo "PORT=$PORT" \
-    && envsubst '$PORT' < /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default \
-    && echo "--- nginx config after envsubst ---" \
-    && cat /etc/nginx/sites-enabled/default \
-    && echo "--- testing nginx ---" \
+CMD envsubst '$PORT' < /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default \
+    && ln -sf /etc/nginx/sites-enabled/default /etc/nginx/conf.d/default.conf \
     && nginx -t \
-    && echo "--- starting php-fpm ---" \
     && php-fpm -D \
     && nginx -g "daemon off;"
