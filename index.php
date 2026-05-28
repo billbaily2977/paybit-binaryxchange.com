@@ -7,20 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <!--<title>PayBit-BinaryXchange</title>-->
     <meta property="og:title" content="Welcome To PayBit-BinaryXchange" />
-    <meta name="description" content="Pro-BinaryXchange is a fully automated trading platform that gives you full control of your investment, and allows you to withdraw your capital and profit at anytime.">
+    <meta name="description" content="Paybit-BinaryXchange is a fully automated trading platform that gives you full control of your investment, and allows you to withdraw your capital and profit at anytime.">
 	<meta property="og:image" content="https://PayBit-BinaryXchange.com/img/fb.png">
     <meta property="og:url" content="https://PayBit-BinaryXchange.com">
 
-    <link href="img/assets/favicon.png" rel="icon" type="image/ico">
+    <link href="public/img/assets/favicon.png" rel="icon" type="image/ico">
 
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/effects.css" rel="stylesheet" type="text/css">
-    <link href="css/backgrounds.css" rel="stylesheet" type="text/css">
+    <link href="public/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="public/css/style.css" rel="stylesheet" type="text/css">
+    <link href="public/css/effects.css" rel="stylesheet" type="text/css">
+    <link href="public/css/backgrounds.css" rel="stylesheet" type="text/css">
 
-    <link href="fonts/FontAwesome/stylesheet.css" rel="stylesheet" type="text/css">
-    <link href="fonts/Ion%20Icons/stylesheet.css" rel="stylesheet" type="text/css">
-    <link href="fonts/ElegantThemes%20Icons/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="public/fonts/FontAwesome/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="public/fonts/Ion%20Icons/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="public/fonts/ElegantThemes%20Icons/stylesheet.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -107,8 +107,8 @@
                 <span class="icon-bar bottom-bar"></span>
             </button>
             <a data-scroll href="#hero" class="navbar-brand">
-                <img style="margin-left:-3px;float:left;max-width:196px" src="img/assets/logo-dark.png" class="logo-dark" alt="#">
-                <img style="margin-left:-4px; float:left;max-width:196px" src="img/assets/logo-light.png" class="logo-light" alt="#">
+                <img style="margin-left:-3px;float:left;max-width:196px" src="public/img/assets/logo-dark.png" class="logo-dark" alt="#">
+                <img style="margin-left:-4px; float:left;max-width:196px" src="public/img/assets/logo-light.png" class="logo-light" alt="#">
 
             </a>
             <div id="google_translate_element" align="center" style="float:center;margin-left:230px"></div>
@@ -285,7 +285,7 @@ function googleTranslateElementInit() {
                             <div class="work-inner-box">
                                 <a href="Dashboard/register">
                                     <div class="icon-box work-icon icon-lg">
-                                        <img src="img/icon/icon1.png" alt="" class="img-responsive">
+                                        <img src="public/img/icon/icon1.png" alt="" class="img-responsive">
                                     </div>
                                 </a>
                                 <h4>Create An Account</h4>
@@ -298,7 +298,7 @@ function googleTranslateElementInit() {
                             <div class="work-inner-box">
                                 <a href="Dashboard/login">
                                     <div class="icon-box work-icon icon-lg">
-                                        <img src="img/icon/icon2.png" alt="" class="img-responsive">
+                                        <img src="public/img/icon/icon2.png" alt="" class="img-responsive">
                                     </div>
                                 </a>
                                 <h4>Fund Account</h4>
@@ -310,7 +310,7 @@ function googleTranslateElementInit() {
                             <div class="work-inner-box">
                                 <a href="Dashboard/login">
                                     <div class="icon-box work-icon icon-lg">
-                                        <img src="img/icon/icon3.png" alt="" class="img-responsive">
+                                        <img src="public/img/icon/icon3.png" alt="" class="img-responsive">
                                     </div>
                                 </a>
                                 <h4>Trade And Earn</h4>
@@ -328,7 +328,7 @@ function googleTranslateElementInit() {
 
 
 
-<section style="background-image:url('img/new/x2.jpg');color:black">
+<section style="background-image:url('public/img/new/x2.jpg');color:black">
     <div class="container">
         <div class="row">
             <div class="heading m-auto text-center " style="padding-top:20px;margin-bottom:10px">
@@ -341,7 +341,7 @@ function googleTranslateElementInit() {
             <div class="col-md-4 col-sm-4">
                 <div class="feature-box">
                     <div class="feature-icon">
-                        <img src="img/icon/8.png" alt="" class="img-responsive">
+                        <img src="public/img/icon/8.png" alt="" class="img-responsive">
                     </div>
                     <div class="feature-inner">
                         <h4>Easy and convenient</h4>
@@ -352,7 +352,7 @@ function googleTranslateElementInit() {
             <div class="col-md-4 col-sm-4">
                 <div class="feature-box">
                     <div class="feature-icon">
-                        <img src="img/icon/4.png" alt="" class="img-responsive">
+                        <img src="public/img/icon/4.png" alt="" class="img-responsive">
                     </div>
                     <div class="feature-inner">
                         <h4>Instant effect</h4>
@@ -364,7 +364,7 @@ function googleTranslateElementInit() {
             <div class="col-md-4 col-sm-4">
                 <div class="feature-box">
                     <div class="feature-icon">
-                        <img src="img/icon/3.png" alt="" class="img-responsive">
+                        <img src="public/img/icon/3.png" alt="" class="img-responsive">
                     </div>
                     <div class="feature-inner">
                         <h4>Good Profit</h4>
@@ -378,7 +378,7 @@ function googleTranslateElementInit() {
             <div class="col-md-4 col-sm-4">
                 <div class="feature-box">
                     <div class="feature-icon">
-                        <img src="img/service/service-5.png" alt="" class="img-responsive">
+                        <img src="public/img/service/service-5.png" alt="" class="img-responsive">
                     </div>
                     <div class="feature-inner">
                         <h4>Management Team</h4>
@@ -390,7 +390,7 @@ function googleTranslateElementInit() {
             <div class="col-md-4 col-sm-4">
                 <div class="feature-box">
                     <div class="feature-icon">
-                        <img src="img/icon/10.png" alt="" class="img-responsive">
+                        <img src="public/img/icon/10.png" alt="" class="img-responsive">
                     </div>
                     <div class="feature-inner">
                         <h4>Technology benefit</h4>
@@ -402,7 +402,7 @@ function googleTranslateElementInit() {
             <div class="col-md-4 col-sm-4">
                 <div class="feature-box">
                     <div class="feature-icon">
-                        <img src="img/icon/99.png" alt="" class="img-responsive">
+                        <img src="public/img/icon/99.png" alt="" class="img-responsive">
                     </div>
                     <div class="feature-inner">
                         <h4>Customer Support</h4>
@@ -429,7 +429,7 @@ function googleTranslateElementInit() {
     <div class="col-md-6">
         <!-- hidden-xs -->
         <div class="price-chart-img">
-            <img src="img/icon/man-3.png" alt="" class="img-responsive">
+            <img src="public/img/icon/man-3.png" alt="" class="img-responsive">
         </div>
         <!-- <div class="about-bg"></div> -->
     </div>
@@ -609,7 +609,7 @@ function googleTranslateElementInit() {
                         </p><br><br>
                         <h4 class="f-xbold">Access the financial markets all in one place</h4>
                         <hr class="seperator">
-                        <img src="img/icon/platform.png" alt="" align="center" class="img-responsive"><br>
+                        <img src="public/img/icon/platform.png" alt="" align="center" class="img-responsive"><br>
                         <p>A multi-platform layout, technical analysis, historical quotes and beyond.
                             Everything you’re looking for in a platform — on all device of your choice.</p>
 
@@ -619,7 +619,7 @@ function googleTranslateElementInit() {
             </div>
             <div class="col-md-6 col-sm-6">
                 <div class="price-chart-img">
-                    <img src="img/icon/q2.gif" alt="" class="img-responsive">
+                    <img src="public/img/icon/q2.gif" alt="" class="img-responsive">
                 </div>
             </div>
         </div>
@@ -636,7 +636,7 @@ function googleTranslateElementInit() {
         <div class="col-sm-8 text-center m-auto pt100 pb100 border-top">
             <div class="white text-center parallax-info">
                 <h2 class="mb10 lspacing">Our Top Iconic Awards</h2>
-                <img src="img/icon/awards.png" alt="" class="img-responsive">
+                <img src="public/img/icon/awards.png" alt="" class="img-responsive">
             </div>
         </div>
     </div>
@@ -660,7 +660,7 @@ function googleTranslateElementInit() {
         <div class="row">
             <div class="col-md 4 col-sm-4">
                 <div class="service-box text-center">
-                    <img style="width:100%;height:100%" src="img/icon/sec1.png" alt="">
+                    <img style="width:100%;height:100%" src="public/img/icon/sec1.png" alt="">
                     <div class="service-inner">
                         <h4>We Are Trusted</h4>
                         <p>Over $1.2B and counting - More than 27k people trust over $1.2 billion with
@@ -670,7 +670,7 @@ function googleTranslateElementInit() {
             </div>
             <div class="col-md 4 col-sm-4">
                 <div class="service-box text-center">
-                    <img style="width:100%;height:100%" src="img/icon/sec2.png" alt="">
+                    <img style="width:100%;height:100%" src="public/img/icon/sec2.png" alt="">
                     <div class="service-inner">
                         <h4>Powerful backing</h4>
                         <p>Powerful backing - PayBit-BinaryXchange is backed by $265M+ in investment from some of the
@@ -680,7 +680,7 @@ function googleTranslateElementInit() {
             </div>
             <div class="col-md 4 col-sm-4">
                 <div class="service-box text-center">
-                    <img style="width:100%;height:100%" src="img/icon/sec3.png" alt="">
+                    <img style="width:100%;height:100%" src="public/img/icon/sec3.png" alt="">
                     <div class="service-inner ">
                         <h4>Strong Encryption</h4>
                         <p>Over $1.2B and counting - More than 27k people trust over $1.2 billion with
@@ -709,7 +709,7 @@ function googleTranslateElementInit() {
             </div>
             <div class="col-sm-4">
                 <div class="price-chart-img">
-                    <img src="img/icon/a3.png" alt="" class="img-responsive">
+                    <img src="public/img/icon/a3.png" alt="" class="img-responsive">
                 </div>
             </div>
         </div>
@@ -729,7 +729,7 @@ function googleTranslateElementInit() {
             <div class="col-md-5 col-sm-5">
                 <div class="price-chart" style="width: 100%;">
                     <div class="price-chart-img">
-                        <img src="img/icon/calculate.png" alt="" class="img-responsive">
+                        <img src="public/img/icon/calculate.png" alt="" class="img-responsive">
                     </div>
                 </div>
             </div>
@@ -866,7 +866,7 @@ function googleTranslateElementInit() {
         <div class="row">
             <div class="col-sm-4">
                 <div class="price-chart-img">
-                    <img src="img/icon/a1.png" alt="" class="img-responsive">
+                    <img src="public/img/icon/a1.png" alt="" class="img-responsive">
                 </div>
             </div>
             <div class="col-md-8 col-sm-3">
@@ -954,7 +954,7 @@ function googleTranslateElementInit() {
                                         <p>
                                             I got my investment right on time will be investing more next time                                        </p>
 
-                                        <img src="img/assets/favicon.png" alt="" class="img-responsive" style="width:20%">
+                                        <img src="public/img/assets/favicon.png" alt="" class="img-responsive" style="width:20%">
                                         <div class="client-info">
                                             <h4>
                                                 Benard Howell                                            </h4>
@@ -967,7 +967,7 @@ function googleTranslateElementInit() {
                                         <p>
                                             I just got my profit I will invite more friends and family                                         </p>
 
-                                        <img src="img/assets/favicon.png" alt="" class="img-responsive" style="width:20%">
+                                        <img src="public/img/assets/favicon.png" alt="" class="img-responsive" style="width:20%">
                                         <div class="client-info">
                                             <h4>
                                                 Maria amor                                            </h4>
@@ -985,7 +985,7 @@ function googleTranslateElementInit() {
                                         <p>
                                             $18,200 withdraw successful nice Trading in this platform                                         </p>
 
-                                        <img src="img/assets/favicon.png" alt="" class="img-responsive" style="width:20%">
+                                        <img src="public/img/assets/favicon.png" alt="" class="img-responsive" style="width:20%">
                                         <div class="client-info">
                                             <h4>
                                                 Harrison Kelvin                                             </h4>
@@ -998,7 +998,7 @@ function googleTranslateElementInit() {
                                         <p>
                                             This trading platform delivered me from my debt and shame, I can&#39;t stop thanking the platform.                                         </p>
 
-                                        <img src="img/assets/favicon.png" alt="" class="img-responsive" style="width:20%">
+                                        <img src="public/img/assets/favicon.png" alt="" class="img-responsive" style="width:20%">
                                         <div class="client-info">
                                             <h4>
                                                 Lucy James                                             </h4>
@@ -1022,7 +1022,7 @@ function googleTranslateElementInit() {
     <div class="row">
         <div class="col-md-3 col-sm-6">
             <div class="client-logo">
-                <img src="img/icon/11.png" alt="" class="img-responsive center-block">
+                <img src="public/img/icon/11.png" alt="" class="img-responsive center-block">
             </div>
         </div>
         <div class="col-md-3 col-sm-6">
@@ -1032,12 +1032,12 @@ function googleTranslateElementInit() {
         </div>
         <div class="col-md-3 col-sm-6">
             <div class="client-logo">
-                <img src="img/icon/13.png" alt="" class="img-responsive center-block">
+                <img src="public/img/icon/13.png" alt="" class="img-responsive center-block">
             </div>
         </div>
         <div class="col-md-3 col-sm-6">
             <div class="client-logo">
-                <img src="img/icon/14.png" alt="" class="img-responsive center-block">
+                <img src="public/img/icon/14.png" alt="" class="img-responsive center-block">
             </div>
         </div>
     </div>
@@ -1093,7 +1093,7 @@ function googleTranslateElementInit() {
 
             <div class="col-md-3 col-sm-6">
                 <div class="widget news-widget">
-                    <img src="img/assets/logo-light.png" alt="" style="max-width:196px">
+                    <img src="public/img/assets/logo-light.png" alt="" style="max-width:196px">
                     <p>
                         PayBit-BinaryXchange is a fully automated trading and crypto mining platform that gives you full
                         control of your investment, and allows you to withdraw your capital
@@ -1143,7 +1143,7 @@ function googleTranslateElementInit() {
             <div class="col-md-3 col-sm-4">
                 <div class="widget footer-widget">
                     <h4>Highly Secured Data</h4>
-                    <img src="img/icon/secure.png" alt="">
+                    <img src="public/img/icon/secure.png" alt="">
                 </div>
             </div>
 
@@ -1223,12 +1223,12 @@ function googleTranslateElementInit() {
 
 
 <!--   JQUERY FILES     -->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/waypoint.min.js"></script>
-<script src="js/counterup.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/scripts.js"></script>
+<script src="public/js/jquery.min.js"></script>
+<script src="public/js/bootstrap.min.js"></script>
+<script src="public/js/waypoint.min.js"></script>
+<script src="public/js/counterup.min.js"></script>
+<script src="public/js/plugins.js"></script>
+<script src="public/js/scripts.js"></script>
 
 <script>
     $(document).keydown(function(event) {
