@@ -3,56 +3,49 @@ session_start();
 
 $uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 
-$base = ''; 
-if ($base !== '' && strpos($uri, $base) === 0) {
-    $uri = substr($uri, strlen($base));
-}
-$uri = trim($uri, '/');
-
 switch ($uri) {
-    
+
     case '':
     case 'home':
-        require __DIR__ . '/home.php';
+        require __DIR__. '/home.php';
         break;
-        
+
     case 'about':
-        require __DIR__ . '/about.php';
-        exit;
-        
+        require __DIR__. '/about.php';
+        break;
+
     case 'terms':
-        require __DIR__ . '/terms.php';
-        exit;
-        
+        require __DIR__. '/terms.php';
+        break;
+
     case 'privacy':
-        require __DIR__ . '/privacy.php';
-        exit;
-        
+        require __DIR__. '/privacy.php';
+        break;
+
     case 'faq':
-        require __DIR__ . '/faq.php';
-        exit;
-        
+        require __DIR__. '/faq.php';
+        break;
+
     case 'contact':
-        require __DIR__ . '/contact.php';
-        exit;
-	case 'privacy':
-        require __DIR__ . '/privacy.php';
-        exit;
+        require __DIR__. '/contact.php';
+        break;
 
     case 'login':
-        require __DIR__ . '/Dashboard/login.php';
-        exit;
-        
+        require __DIR__. '/Dashboard/login.php';
+        break;
+
     case 'register':
-        require __DIR__ . '/Dashboard/register.php';
-        exit;
-        
+        require __DIR__. '/Dashboard/register.php';
+        break;
+
     case 'Dashboard':
-        require __DIR__ . '/Dashboard/index.php';
-        exit;
+    case 'dashboard':
+        // Delegate to dashboard router
+        require __DIR__. '/Dashboard/index.php';
+        break;
 
     default:
         http_response_code(404);
         echo '404 - Page Not Found';
-        exit;
+        break;
 }
