@@ -314,7 +314,7 @@ $imagePath = get_user_image_path();
           <div class="form-group row">
             <label for="example-email-input" class="col-16 col-form-label">Email<font color="crimson">*</font></label>
             <div class="col-16">
-              <input class="form-control" style="background:transparent" type="email" name="email" value="<?= $_SESSION['currency'] ?>" id="example-email-input" readonly>
+              <input class="form-control" style="background:transparent" type="email" name="email" value="<?= htmlspecialchars($user['email']) ?>" id="example-email-input" readonly>
             </div>
           </div>
           <div class="form-group row">
