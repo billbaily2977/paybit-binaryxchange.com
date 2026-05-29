@@ -116,7 +116,7 @@ $imagePath = get_user_image_path();
   
 <header class="navbar-fixed">
   <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded">
-    <div class="sidebar-left"> <a class="navbar-brand imglogo" href="account"></a>
+    <div class="sidebar-left"> <a class="navbar-brand imglogo" href="account.php"></a>
       <button class="btn btn-link icon-header mr-sm-2 pull-right menu-collapse"><span class="fa fa-bars"></span></button>
     </div>
     <div class="d-flex mr-auto"> &nbsp;</div>
@@ -211,7 +211,7 @@ $imagePath = get_user_image_path();
         <li class="nav-item">
           <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><span class="userpic"><img src="<?php echo get_user_image_path(); ?>" alt="user pic"></span> <span class="text"></span>
         </li>
-        <li><a href="logout" class="btn btn-link icon-header"><span class="fa fa-power-off"></span></a></li>
+        <li><a href="logout.php" class="btn btn-link icon-header"><span class="fa fa-power-off"></span></a></li>
       </ul>
     </div>
   </nav>
@@ -227,14 +227,14 @@ $imagePath = get_user_image_path();
   <br>
   <ul class="nav flex-column in" id="side-menu">
 
-    <li class="nav-item"> <a class="nav-link" href="account"><i class="fa fa-home"></i>Account</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="deposit"><i class="fa fa-money"></i>Deposit</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="withdraw"><i class="fa fa-briefcase"></i>Withdraw</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="history"><i class="fa fa-exchange"></i>History</a>
-    <li class="nav-item"> <a class="nav-link" href="transaction"><i class="fa fa-exchange"></i>Transactions</a>
-    <li class="nav-item"> <a class="nav-link" href="signal"><i class="fa fa-signal"></i>Signal Purchase</a>
-    <li class="nav-item"> <a class="nav-link" href="upgrade"><i class="fa fa-bank"></i>Account Upgrade</a> </li>
-    <li class="nav-item"> <a class="nav-link" href="settings"><i class="fa fa-gear"></i>Account Settings</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="account.php"><i class="fa fa-home"></i>Account</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="deposit.php"><i class="fa fa-money"></i>Deposit</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="withdraw.php"><i class="fa fa-briefcase"></i>Withdraw</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="history.php"><i class="fa fa-exchange"></i>History</a>
+    <li class="nav-item"> <a class="nav-link" href="transaction.php"><i class="fa fa-exchange"></i>Transactions</a>
+    <li class="nav-item"> <a class="nav-link" href="signal.php"><i class="fa fa-signal"></i>Signal Purchase</a>
+    <li class="nav-item"> <a class="nav-link" href="upgrade.php"><i class="fa fa-bank"></i>Account Upgrade</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="settings.php"><i class="fa fa-gear"></i>Account Settings</a> </li>
     <li class="nav-item"> <a class="nav-link" href="mailto:support@paybit-binaryxchange.com"><i class="fa fa-comment"></i>Contact Support</a> </li>
     <li class="nav-item "> <a href="javascript:void(0)" class="menudropdown nav-link">Where to Buy Coin<i class="fa fa-angle-down "></i></a>
       <ul class="nav flex-column nav-second-level ">
@@ -252,7 +252,7 @@ $imagePath = get_user_image_path();
       </ul>
       <!-- /.nav-second-level -->
     </li>
-    <li class="nav-item"> <a class="nav-link" href="logout"><i class="fa fa-power-off"></i>Logout</a></li>
+    <li class="nav-item"> <a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i>Logout</a></li>
   </ul>
   <hr>
   <ul class="nav flex-column in">
