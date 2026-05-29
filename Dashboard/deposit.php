@@ -327,7 +327,7 @@ unset($_SESSION['msg']);
             </span>
           </b>
           <br>
-          <form action="payment" method="POST">
+          <form action="payment.php" method="POST">
             <div class="form-group row">
               <label for="exa1" class="col-16 col-form-label" style="text-align:left">Amount <font color="crison">$ *</font></label>
               <div class="col-16">
