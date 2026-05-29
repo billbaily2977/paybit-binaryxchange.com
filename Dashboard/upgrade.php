@@ -322,7 +322,7 @@ $imagePath = get_user_image_path();
             <div class="col-16">
               <select class="form-control" value="" name="plan" id="example-number-input" required>
                 <option disabled selected>--Select Package --</option>
-                <option value="Starter">Starter $500.00</option>                <option value="Premium">Premium $5,000.00</option>                <option value="Standard">Standard $20,000.00</option>                <option value="Vip">Vip $50,000.00</option>                                                                              </select>
+                <option value="Starter">Starter $500.00</option>                <option value="Premium">Premium $5,000.00</option>             <option value="Standard">Standard $20,000.00</option>                <option value="Vip">Vip $50,000.00</option>                                                                              </select>
             </div>
           </div>
           <div class="form-group row">
