@@ -220,7 +220,7 @@ $imagePath = get_user_image_path();
     <div class="sidebar-right pull-right ">
       <ul class="navbar-nav  justify-content-end">
         <li class="nav-item">
-          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><span class="userpic"><img src="<?php echo get_user_image_path(); ?>" alt="user pic"></span> <span class="text"></span>
+          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><span class="userpic"><img src="<?php echo get_user_image_path(); ?>" alt="user pic"><?= $_SESSION['first_name'] ?> <?= $_SESSION['last_name'] ?></span> <span class="text"></span>
         </li>
         <li><a href="logout.php" class="btn btn-link icon-header"><span class="fa fa-power-off"></span></a></li>
       </ul>
@@ -232,7 +232,7 @@ $imagePath = get_user_image_path();
     <div class="list-unstyled btn-group">
       <button class="media btn btn-link" aria-haspopup="true" aria-expanded="false"> <span class="message_userpic">
         <img class="d-flex" src="<?php echo get_user_image_path(); ?>" alt="Generic user image"></span> 
-        <span class="media-body"> <span class="mt-0 mb-1"></span> <small></small> </span> </button>
+        <span class="media-body"> <span class="mt-0 mb-1"><?= $_SESSION['first_name'] ?> <?= $_SESSION['last_name'] ?></span> <small></small> </span> </button>
     </div>
   </div>
   <br>
