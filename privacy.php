@@ -136,10 +136,10 @@ function googleTranslateElementInit() {
                     <a data-scroll href="contact">Contact</a>
                 </li>
                                     <li>
-                        <a data-scroll href="Dashboard/login">login</a>
+                        <a data-scroll href="Dashboard/login.php">login</a>
                     </li>
                     <li class="quote" style="color:white;border-radius:5px">
-                        <a href="Dashboard/register" style="color:white">Get Started</a>
+                        <a href="Dashboard/register.php" style="color:white">Get Started</a>
                     </li>
                             </ul>
         </div>
