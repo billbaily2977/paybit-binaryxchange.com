@@ -564,7 +564,7 @@ $imagePath = $user['image_path'] ?? 'public/img/profile/default.png';
         <button type="button" onclick="referralFunction()" class="btn btn-primary">Copy Referral Link</button>
       </div>
       <div class="col-10">
-        <input type="text" style="color:black" class="form-control" id="referral_link" value="https://www.paybit-binaryxchange.com/Dashboard/register?<?= $_SESSION['first_name'] ?><?= $_SESSION['last_name'] ?>" readonly="">
+        <input type="text" style="color:black" class="form-control" id="referral_link" value="https://www.paybit-binaryxchange.com/Dashboard/register?<?= $_SESSION['first_name'] ?> <?= $_SESSION['last_name'] ?>" readonly="">
       </div>
     </div>
   </div>
