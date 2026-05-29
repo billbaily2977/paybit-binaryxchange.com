@@ -189,8 +189,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <ul class="navbar-nav  justify-content-end">
           <li style="margin:4px"><a href="#" class="btn btn-link text-white"></a></li>
           <li style="margin:4px"><a href="../home" style="background:#3f48cc;color:white" class="btn btn-primary">Home</a></li>
-          <li style="margin:4px"><a href="login" style="background:#3f48cc;color:white" class="btn btn-primary">Login</a></li>
-          <li style="margin:4px"><a href="register" style="background:#3f48cc;color:white" class="btn btn-primary">Register</a></li>
+          <li style="margin:4px"><a href="login.php" style="background:#3f48cc;color:white" class="btn btn-primary">Login</a></li>
+          <li style="margin:4px"><a href="register.php" style="background:#3f48cc;color:white" class="btn btn-primary">Register</a></li>
         </ul>
       </div>
     </nav>
