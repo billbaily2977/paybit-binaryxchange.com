@@ -219,7 +219,7 @@ $imagePath = get_user_image_path();
     <div class="sidebar-right pull-right ">
       <ul class="navbar-nav  justify-content-end">
         <li class="nav-item">
-          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><span class="userpic"><img src="<?php echo get_user_image_path(); ?>" alt="user pic"></span> <span class="text"></span>
+          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><span class="userpic"><img src="<?php echo get_user_image_path(); ?>" alt="user pic"><?= htmlspecialchars($user['first_name']) ?> <?= htmlspecialchars($user['last_name']) ?></span> <span class="text"></span>
         </li>
         <li><a href="logout.php" class="btn btn-link icon-header"><span class="fa fa-power-off"></span></a></li>
       </ul>
