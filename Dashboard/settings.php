@@ -429,7 +429,7 @@ $imagePath = $user['image_path'] ?? 'public/img/profile/default.png';
           <div class="form-group row">
             <div class="col-8">
               <label for="example-number-input" class="col-16 col-form-label"><i class="fa fa-user"></i> UserName</label>
-              <input class="form-control" name="username" type="text" value="<?= htmlspecialchars($user['username']) ?>" readonly>
+              <input class="form-control" name="username" type="text" value="<?= htmlspecialchars($user['username']) ?>"id="example-number-inputl" readonly>
             </div>
             <div class="col-8">
               <label for="example-number-inpute" class="col-16 col-form-label"><i class="fa fa-email"></i> Email</label>
@@ -439,7 +439,7 @@ $imagePath = $user['image_path'] ?? 'public/img/profile/default.png';
           <div class="form-group row">
             <div class="col-8">
               <label for="example-number-input" class="col-16 col-form-label"><i class="fa fa-location"></i> Country</label>
-              <input class="form-control" name="country" type="text" value="<?= htmlspecialchars($user['country']) ?>" readonly>
+              <input class="form-control" name="country" type="text" value="<?= htmlspecialchars($user['country']) ?>" id="example-number-inputl" readonly>
             </div>
             <div class="col-8">
               <label for="example-number-inputs" class="col-16 col-form-label"><i class="fa fa-location"></i> State / Province</label>
