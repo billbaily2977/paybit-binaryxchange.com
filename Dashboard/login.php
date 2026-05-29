@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION["id"])) {
-    header("Location: account");
+    header("Location: account.php");
     exit;
 }
 
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $_SESSION['currency']   = $user['currency'];
                     $_SESSION['number']     = $user['number'];
 
-                    header("Location: account");
+                    header("Location: account.php");
                     exit;
                 } else {
                     $error = "Invalid email or password";
