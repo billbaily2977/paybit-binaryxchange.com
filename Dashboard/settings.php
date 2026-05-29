@@ -329,7 +329,7 @@ $imagePath = $user['image_path'] ?? 'public/img/profile/default.png';
     <div class="sidebar-right pull-right ">
       <ul class="navbar-nav  justify-content-end">
         <li class="nav-item">
-          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><span class="userpic"><img src="<?= htmlspecialchars($imagePath) ?? '/img/profile/default.png'; ?>" alt="user pic"></span><span class="text" ><?= $_SESSION['first_name'] ?><?= $_SESSION['last_name'] ?></span>
+          <button class="btn-link btn userprofile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><span class="userpic"><img src="<?= htmlspecialchars($imagePath) ?? 'public/img/profile/default.png'; ?>" alt="user pic"></span><span class="text" ><?= $_SESSION['first_name'] ?><?= $_SESSION['last_name'] ?></span>
         </li>
         <li><a href="logout.php" class="btn btn-link icon-header"><span class="fa fa-power-off"></span></a></li>
       </ul>
@@ -340,7 +340,7 @@ $imagePath = $user['image_path'] ?? 'public/img/profile/default.png';
   <div class="user-menu-items">
     <div class="list-unstyled btn-group">
       <button class="media btn btn-link" aria-haspopup="true" aria-expanded="false"> <span class="message_userpic">
-        <img class="d-flex" src="<?= htmlspecialchars($imagePath) ?? '/img/profile/default.png'; ?>" alt="Generic user image"></span> 
+        <img class="d-flex" src="<?= htmlspecialchars($imagePath) ?? 'public/img/profile/default.png'; ?>" alt="Generic user image"></span> 
         <span class="media-body"> <span class="mt-0 mb-1"><?= $_SESSION['first_name'] ?><?= $_SESSION['last_name'] ?></span><small></small> </span></button>
     </div>
   </div>
