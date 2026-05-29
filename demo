@@ -722,7 +722,7 @@
                         </h2>
                         <p class="dfp-body"></p>
                         <div class="dfp-foot">
-                            <a class="link_out" target="_parent" href="../../Dashboard/register">
+                            <a class="link_out" target="_parent" href="../../Dashboard/register.php">
                                 <div class="left-foot">
                                     <i class="fa fa-arrow-left"></i>
                                 </div>
@@ -832,7 +832,7 @@
                 </h2>
                 <p class="dfp-body"></p>
                 <div class="dfp-foot">
-                    <a class="link_out" target="_parent" href="../../Dashboard/register">
+                    <a class="link_out" target="_parent" href="../../Dashboard/register.php">
                         <div class="left-foot">
                             <i class="fa fa-arrow-left"></i>
                         </div>
